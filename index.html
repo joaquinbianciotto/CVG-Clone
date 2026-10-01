@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; frame-src 'none'; base-uri 'none'">
+  <title>Página Principal | UTN — Maqueta local no oficial</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.8"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m6 4 3 3-2 4 4 2 2 7 3-5 4-2-3-4-4-1 1-5"/></symbol>
+    <symbol id="icon-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="icon-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="icon-up" viewBox="0 0 24 24"><path d="m5 15 7-7 7 7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 45 45"><circle cx="22.5" cy="22.5" r="22.5" fill="#e5e5e5"/><circle cx="22.5" cy="18" r="10" fill="white"/><path d="M7 42a15.5 15.5 0 0 1 31 0" fill="white"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Salta al contenido principal</a>
+  <div id="page-scroll" tabindex="-1">
+  <header class="site-header">
+    <nav class="topbar" aria-label="Navegación principal">
+      <button id="mobile-toggle" class="icon-button mobile-only" aria-label="Panel lateral" aria-controls="mobile-drawer" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+      <div class="header-actions">
+        <button id="search-toggle" class="icon-button" aria-label="Selector de búsqueda de entrada" aria-controls="header-search" aria-expanded="false">
+          <svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg>
+        </button>
+        <div class="language-control">
+          <button id="language-toggle" aria-label="Idioma" aria-controls="language-menu" aria-expanded="false">
+            <svg class="icon globe" aria-hidden="true"><use href="#icon-globe"/></svg>
+            <span class="language-label">Español - Internacional (es)</span>
+          </button>
+          <div id="language-menu" class="popup" hidden>
+            <button data-language="en">English (en)</button>
+            <button data-language="es" aria-current="true">Español - Internacional (es)</button>
+          </div>
+        </div>
+        <button id="login" class="login-button" data-demo="El acceso a cuentas no está disponible en esta maqueta local.">Entrar</button>
+      </div>
+    </nav>
+    <div class="brand-strip">
+      <img class="wordmark" src="imagenes/logo-utn.png" width="250" height="75" alt="Universidad Tecnológica Nacional — UTN">
+    </div>
+    <section id="header-search" class="popup search-popup" aria-label="Búsqueda local" hidden>
+      <form id="header-search-form" role="search">
+        <label class="sr-only" for="header-query">Buscar en esta página</label>
+        <input id="header-query" type="search" placeholder="Buscar en esta página" autocomplete="off">
+        <button class="soft-button" type="submit" aria-label="Buscar en esta página"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg></button>
+        <button id="search-close" class="icon-button" type="button" aria-label="Cerrar búsqueda"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button>
+      </form>
+      <p id="header-feedback" role="status"></p>
+    </section>
+  </header>
+
+    <section id="carousel" aria-roledescription="carrusel" aria-label="Información del Campus Virtual" tabindex="0">
+      <div class="slide-viewport">
+        <div class="slide is-active" aria-hidden="false"><img src="imagenes/portada_final_n1.png" width="3989" height="596" alt="Campus Virtual Global: un entorno que acompaña el aprendizaje"></div>
+        <div class="slide" aria-hidden="true"><img src="imagenes/portada_n2.png" width="3989" height="596" alt="Área del Campus Virtual: soporte, recursos, acompañamiento y mejoras"></div>
+        <div class="slide" aria-hidden="true"><img src="imagenes/portada_n3.png" width="2167" height="480" alt="Día Mundial de la Prevención del Suicidio: escuchar y acompañar"></div>
+      </div>
+      <button id="previous" class="carousel-arrow previous" aria-label="Previous"><svg class="icon" aria-hidden="true"><use href="#icon-left"/></svg></button>
+      <button id="next" class="carousel-arrow next" aria-label="Next"><svg class="icon" aria-hidden="true"><use href="#icon-right"/></svg></button>
+      <div class="carousel-dots" aria-label="Elegir diapositiva">
+        <button data-slide="0" aria-label="1" aria-current="true"></button>
+        <button data-slide="1" aria-label="2" aria-current="false"></button>
+        <button data-slide="2" aria-label="3" aria-current="false"></button>
+      </div>
+      <button id="carousel-pause" class="sr-only focus-reveal" aria-pressed="false">Pausar carrusel</button>
+      <span id="carousel-status" class="sr-only" aria-live="polite"></span>
+    </section>
+
+    <main id="main" tabindex="-1">
+      <h1 class="sr-only">Campus Virtual Global — Maqueta local</h1>
+      <section class="artwork" aria-label="Información y acompañamiento">
+        <div class="embed-space" aria-hidden="true"></div>
+        <img id="prevention" class="square-art" src="imagenes/imagen_bajo_portada_n1.png" width="1254" height="1254" alt="10 de septiembre, Día Mundial de la Prevención del Suicidio. Escuchar sin juicios, pedir ayuda y acompañar: tu vida importa.">
+        <hr>
+        <img class="support-art" src="imagenes/imagen_bajo_portada_n2.png" width="3989" height="596" alt="¿No podés ingresar al Campus? Escribinos a campus.frre@gmail.com indicando asunto, nombre completo y número de legajo.">
+        <hr>
+        <img class="support-art" src="imagenes/imagen_bajo_portada_n3.png" width="3989" height="596" alt="¿No ves tus materias? Escribinos a campus.frre@gmail.com indicando asunto, número de legajo y asignaturas.">
+        <hr>
+        <img id="schedule" class="schedule-art" src="imagenes/imagen_bajo_portada_n4.png" width="1449" height="749" alt="Nuestros horarios, de lunes a viernes. Atención de Juli, Gonza y Bruno por la mañana y por la tarde; miércoles en GIESIN y jueves en Planeamiento.">
+      </section>
+      <section id="news" aria-labelledby="news-heading">
+        <h2 id="news-heading">Novedades</h2>
+        <article id="news-post">
+          <header class="post-header">
+            <svg class="avatar" aria-hidden="true"><use href="#icon-user"/></svg>
+            <div>
+              <h3>¿Nuevo inicio de sesión con tu cuenta CV-UTN-Facultad Regional Resistencia?</h3>
+              <p class="byline">de <button class="text-button" data-demo="Los perfiles de la comunidad requieren acceso al campus oficial.">Gonza Admin</button> - lunes, 13 de abril de 2026, 11:24</p>
+            </div>
+          </header>
+          <div class="post-body">
+            <div class="email-example">
+              <p>Recientemente te ha llegado un correo similar a este?</p>
+              <img src="imagenes/imagen_novedades.PNG" width="860" height="359" alt="Ejemplo de correo de aviso de un nuevo inicio de sesión; datos de la cuenta ocultos en la imagen suministrada.">
+            </div>
+            <p class="news-text">La semana pasada el equipo de CCD llevo acabo unas pruebas en el sistema de notificaciones del campus virtual, y es probable que debido a esas pruebas te haya llegado un correo como este. No hay de que alarmarse, este correo de seguro se habra enviado poco tiempo despues de que hayas iniciado sesion en campus en un dispositivo.</p>
+            <div class="post-actions">
+              <button class="soft-button" data-demo="Este artículo forma parte de una maqueta local; no se genera un enlace al campus oficial.">Enlace permanente</button>
+              <div><button class="text-button" data-demo="Los comentarios de la comunidad no están disponibles en esta maqueta local.">Hacer un comentario en este tema</button> &nbsp;(0 réplicas)</div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <form id="course-search" role="search">
+        <label class="sr-only" for="course-query">Buscar cursos</label>
+        <input id="course-query" type="search" placeholder="Buscar cursos" autocomplete="off">
+        <button class="soft-button" type="submit" aria-label="Buscar cursos"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg></button>
+        <p id="course-feedback" role="status"></p>
+      </form>
+    </main>
+    <footer class="site-footer"><a href="https://ria.utn.edu.ar/" target="_blank" rel="noopener noreferrer">RIA</a></footer>
+  </div>
+
+  <button id="blocks-toggle" aria-label="Abrir cajón de bloques" aria-controls="blocks-drawer" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#icon-left"/></svg></button>
+  <button id="back-to-top" class="soft-button" aria-label="Volver arriba" hidden><svg class="icon" aria-hidden="true"><use href="#icon-up"/></svg></button>
+  <p class="demo-badge">Maqueta local · No es el sitio oficial</p>
+  <dialog id="mobile-drawer" class="drawer left-drawer" aria-label="Panel lateral">
+    <button class="icon-button drawer-close" data-close aria-label="Cerrar caja"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button>
+  </dialog>
+  <dialog id="blocks-drawer" class="drawer right-drawer" aria-labelledby="blocks-heading">
+    <button class="icon-button drawer-close" data-close aria-label="Cerrar cajón de bloques"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button>
+    <h2 id="blocks-heading">Bloques</h2>
+    <p>Maqueta local no oficial. Los servicios de la comunidad no están conectados.</p>
+    <button class="soft-button" data-demo="Los servicios de la comunidad requieren acceso al campus oficial.">Comunidad</button>
+  </dialog>
+  <dialog id="demo-dialog" aria-labelledby="demo-heading" aria-describedby="demo-message demo-safety">
+    <h2 id="demo-heading">Maqueta local no oficial</h2>
+    <p id="demo-message"></p>
+    <p id="demo-safety">Esta demostración no solicita credenciales, no envía datos ni inicia sesión. El contenido de referencia se conserva en español.</p>
+    <button class="soft-button" data-close>Cerrar</button>
+  </dialog>
+</body>
+</html>
