@@ -12,13 +12,14 @@ installation, network connection, or runtime CDN is needed.
 
 This is a visibly labeled, nonofficial **local demo** of the public CVG homepage
 and login layout, not an authentication service or a replacement for the
-university's services. It cannot accept real credentials.
+university's services. Use only dummy data: this page does not authenticate,
+read, submit, or store the demonstration field values.
 
 ## Manual login path
 
 1. Open `index.html` and choose **Entrar** to navigate to `login.html`.
 2. Review the **Maqueta local · No es el sitio oficial** notice. The nameless
-   username/password fields are disabled and contain fixed demonstration values.
+   username/password fields are editable and initially empty; enter only dummy data.
 3. **Acceder** only calls `window.location.assign` with the exact constant
    `https://frre.cvg.utn.edu.ar/login/index.php`. It reads no input values,
    cookies, or stored data and forwards no query string, request body, or
@@ -26,7 +27,7 @@ university's services. It cannot accept real credentials.
 4. The password-recovery link opens the genuine public official recovery page.
    Guest access, language information, and the cookie notice are local
    information disclosures, not connected university services.
-5. **Volver a la página principal** returns to `index.html`.
+5. Use your browser's Back action to return to `index.html`.
 
 `login.html`, `login.css`, and `login.js` are standalone vanilla files. The login
 does not load the homepage's `script.js`. CSP blocks connections and form actions;
@@ -40,7 +41,7 @@ node --check login.js
 node --check tests/browser-checks.js
 ```
 
-Targeted source readback checks the local Entrar anchor, disabled nameless fields,
+Targeted source readback checks the local Entrar anchor, editable nameless fields,
 constant data-free redirect, and local resource paths. New login visual/browser
 review and manual navigation were left to the user. The official Acceder redirect
 was not exercised, and the existing full browser harness was not rerun for this
@@ -76,11 +77,10 @@ path; update it and the command if relocating the repository.
 - The persistent Spanish demo badge is never hidden, including in screenshots.
 - Entrar now opens the local login demonstration. Profiles, community actions,
   comments, and permanent-link actions still open informational dialogs.
-  The only credential-shaped fields are disabled, nameless static demo fields
-  on the login page; no account or credential handling is implemented.
-- The login adds a visible safety notice, demonstration explanation, and a
-  return-home link with the existing local logo. Its mobile card fits the
-  viewport rather than reproducing the reference card's horizontal overflow.
+  The login's nameless fields allow local dummy-data entry; their values are
+  never read by the script, submitted, or stored by the application.
+- The login retains a visible safety notice. Its mobile card fits the viewport
+  rather than reproducing the reference card's horizontal overflow.
   Secondary login services show local information, except the observed genuine
   public password-recovery link. Acceder only leaves for the constant official
   login URL; no authentication or SSO is implemented.
@@ -119,8 +119,8 @@ and mobile 390×844 are `/tmp/cvg-login-reference/desktop-t4-reference.png` and
 `/tmp/cvg-login-reference/mobile-t4-reference.png`; these are not local UI
 verification. The public page used Open Sans, Roboto, a white desktop 500px card,
 a pale-blue Acceder button, and teal secondary controls. No logo appeared inside
-the reference form; the local return-home link and favicon reuse the existing
-logo without adding artwork or downloading assets.
+the reference form; the local favicon reuses the existing logo without adding
+artwork or downloading assets.
 
 | Added file | Exact public source | License / use |
 | --- | --- | --- |
@@ -142,9 +142,10 @@ not runtime requests. Icons are small inline SVG drawings, not Font Awesome.
 
 The accepted homepage is checkpoint
 `3ea7ed0f980acb9e63f16f7f9e42fde027a305ee` on `feat/cvg-homepage`; it is not
-being visually refined. The new login changes remain uncommitted, with visual
-review and manual navigation left to the user. No native-review approval or
-pixel-identity claim is made.
+being visually refined. The login baseline was subsequently committed by the
+user as `4ab13aa` (`agregado login`). The editable-field follow-up remains
+uncommitted, with visual review and manual navigation left to the user.
+No native-review approval or pixel-identity claim is made.
 
 The T4 rollback boundary is only the new `login.html`, `login.css`, and `login.js`,
 plus the changes to `index.html`, `styles.css`, `tests/browser-checks.js`, and

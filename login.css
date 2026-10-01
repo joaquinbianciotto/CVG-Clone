@@ -72,7 +72,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, [tabindex]:focus-v
   box-shadow: 0 8px 16px #0003;
 }
 .field-group { margin-bottom: 16px; }
-.login-fields input:disabled {
+.login-fields input {
   display: block;
   width: 100%;
   border: 1px solid #8f959e;
@@ -84,7 +84,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, [tabindex]:focus-v
   font-size: 19px;
   line-height: 1.5;
   opacity: 1;
-  cursor: not-allowed;
+  cursor: text;
 }
 .primary-button, .secondary-button {
   border: 0;
@@ -139,5 +139,5 @@ details p { margin: 12px 0 0; font-size: 13px; line-height: 1.5; }
 @media (max-width: 575.98px) {
   .demo-header { min-height: 55px; }
   .login-container { width: 100%; max-width: 100%; padding: 49px 32px 48px; }
-  .login-fields input:disabled { font-size: 16.2055px; }
+  .login-fields input { font-size: 16.2055px; }
 }
