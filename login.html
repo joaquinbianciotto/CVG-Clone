@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Entrar al sitio | UTN — Maqueta local no oficial</title>
+  <link rel="icon" href="imagenes/logo-utn.png">
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#login-heading">Salta al contenido principal</a>
+  <header class="demo-header">
+  </header>
+
+  <main class="login-container" aria-labelledby="login-heading">
+    <h1 id="login-heading" class="sr-only" tabindex="-1">Entrar al sitio — Demostración local</h1>
+    <section class="login-fields" aria-label="Campos de demostración" aria-describedby="demo-explanation">
+      <div class="field-group">
+        <label class="sr-only" for="demo-username">Nombre de usuario</label>
+        <input id="demo-username" type="text" value="Nombre de usuario" disabled autocomplete="off" aria-describedby="demo-explanation">
+      </div>
+      <div class="field-group">
+        <label class="sr-only" for="demo-password">Contraseña</label>
+        <input id="demo-password" type="password" value="demostracion" disabled autocomplete="off" aria-describedby="demo-explanation">
+      </div>
+      <button id="official-login" class="primary-button" type="button" aria-describedby="demo-explanation">Acceder</button>
+      <p class="forgot-password"><a href="https://frre.cvg.utn.edu.ar/login/forgot_password.php" rel="noreferrer">¿Olvidó su contraseña?</a>
+
+    <hr>
+    <section aria-labelledby="guest-heading">
+      <h2 id="guest-heading">Algunos cursos permiten el acceso de invitados</h2>
+      <details class="guest-info">
+        <summary class="secondary-button guest-button">Entrar como persona invitada</summary>
+        <p>Este control solo muestra información local. No inicia una sesión de invitado ni conecta con los cursos. Para consultar el acceso real, visite el sitio oficial mediante Acceder.</p>
+      </details>
+    </section>
+
+    <hr>
+    <div class="login-tools">
+      <details class="language-info">
+        <summary>Español - Internacional (es) <span aria-hidden="true">▾</span></summary>
+        <p>El contenido de esta maqueta se mantiene en español; no se cambia el idioma del sitio oficial.</p>
+      </details>
+      <details class="cookie-info">
+        <summary class="secondary-button">Aviso de Cookies</summary>
+        <p>Esta maqueta no utiliza cookies, almacenamiento del navegador ni seguimiento. Este aviso es información local, no una solicitud de consentimiento del campus.</p>
+      </details>
+    </div>
+    <noscript><p>Acceder necesita JavaScript para abrir el sitio oficial. Los campos siguen deshabilitados y no se envían datos.</p></noscript>
+  </main>
+
+  <footer class="local-footer">
+ </footer>
+</body>
+</html>
